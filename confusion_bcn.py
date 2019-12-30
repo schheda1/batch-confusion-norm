@@ -104,6 +104,10 @@ l_ambda = 10
 batch_size = 16
 scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer=optimizer, T_max=10000)
 
+resnet = models.resnet50(pretrained=True)
+resnet.fc = nn.Sequential(
+    nn.Linear(2048, 200, bias=True)
+)
 
 for epoch in range(num_epochs):
 
