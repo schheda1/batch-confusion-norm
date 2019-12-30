@@ -104,7 +104,6 @@ l_ambda = 10
 batch_size = 16
 scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer=optimizer, T_max=10000)
 
-print('training about to start')
 
 for epoch in range(num_epochs):
 
