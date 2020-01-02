@@ -102,7 +102,7 @@ file = open("bcn_log.txt", "a")
 
 l_ambda = 10
 batch_size = 16
-scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer=optimizer, T_max=10000)
+scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer=optimizer, T_max=num_epochs)
 
 resnet = models.resnet50(pretrained=True)
 resnet.fc = nn.Sequential(
